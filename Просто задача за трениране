@@ -1,0 +1,21 @@
+using System;
+
+namespace Savings
+{
+    class Savings
+    {
+        static void Main(string[] args)
+        {
+            double incomeForMonth = double.Parse(Console.ReadLine());
+            int months = int.Parse(Console.ReadLine());
+            double personalExpences = double.Parse(Console.ReadLine());
+
+            double moneyLeft = incomeForMonth - personalExpences - (incomeForMonth * 0.3);
+            double percent = moneyLeft / incomeForMonth * 100;
+            double sum = moneyLeft * months;
+
+            Console.WriteLine($"She can save {percent:F2}%");
+            Console.WriteLine($"{sum:F2}");
+        }
+    }
+}
